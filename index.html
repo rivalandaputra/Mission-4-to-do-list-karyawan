@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div class="brand">
+        <span class="brand-icon">✓</span>
+        <h1>TaskFlow</h1>
+    </div>
+
+    <div class="profile">
+        <div class="profile-avatar">
+            <img src="./assets/Foto Rival  Andaputra.png" alt="Foto Rival">
+        </div>
+        <div class="profile-info">
+            <h3>Rival Andaputra</h3>
+            <p>Full-stack web developer</p>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="welcome">
+        <div>
+            <p class="date" id="current-date">Hari dan tanggal</p>
+            <h2>My Tasks</h2>
+            <p class="subtitle">Atur pekerjaanmu, selesaikan satu per satu.</p>
+        </div>
+    </section>
+
+    <section class="task-form">
+        <h3>Tambah Tugas</h3>
+
+        <form id="todo-form">
+            <label for="task-input">Apa yang ingin kamu kerjakan?</label>
+
+            <textarea
+                id="task-input"
+                placeholder="Tulis tugasmu di sini..."
+                required
+            ></textarea>
+
+            
+            <label for="task-deadline">Deadline (opsional)</label>
+            <input type="date" id="task-deadline">
+
+            <div class="form-footer">
+                <div class="priority-field">
+                    <label for="task-priority">Prioritas</label>
+                    <select id="task-priority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    + Tambah Tugas
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <section class="task-board">
+
+        <div class="task-column">
+            <div class="column-heading">
+                <h3>To Do</h3>
+                <span id="todo-count">0</span>
+            </div>
+
+            <div id="todo-list" class="task-list">
+                <!-- Tugas yang belum selesai ditampilkan di sini -->
+            </div>
+        </div>
+
+        <div class="task-column">
+            <div class="column-heading">
+                <h3>Done</h3>
+                <span id="done-count">0</span>
+            </div>
+
+            <div id="done-list" class="task-list">
+                <!-- Tugas yang sudah selesai ditampilkan di sini -->
+            </div>
+        </div>
+
+    </section>
+
+    <div class="board-footer">
+        <button type="button" id="delete-all" class="btn-delete-all">
+            Hapus Semua Tugas
+        </button>
+    </div>
+
+</main>
+
+
+    <!-- JavaScript -->
+     <script src="script.js"></script>
+</body>
+</html>
